@@ -1,0 +1,89 @@
+$primaryBackground: #ffab87;
+
+
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction
+}
+
+body {
+    @include flexCenter(column);
+        background: linear-gradient(-75deg, #27201e, #afa8aa, #d36f56, #edfffb);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// i took this gradient effect from a site and tweaked it a bit. just testing it out.
+
+ .button {
+     margin-bottom: 2em;
+
+     }
+
+     h1 {
+         color:rgba(240, 221, 221, 0.3)
+     }
+
+.main {
+        @include flexCenter(column);
+        min-width: 80vw;
+        height: 95vh;
+        border: 1px solid black;
+        background-color: rgba(3,4,5,0.6);
+      
+}
+
+.photo-viewer {
+            @include flexCenter(column);
+
+width: 80%;
+height: 80%;
+border: 1px solid black;
+  margin-bottom: 1em;
+}
+
+.btn-container {
+            @include flexCenter(row);
+            button {
+                margin: 2em;
+                font-size: large;
+            }
+
+}
+
+.photo-viewer-photo {
+ @include flexCenter(column);
+ margin: 1em;
+ padding: 1em;
+width: 80%;
+height: 70%;
+background-color: rgba(255, 163, 163, 0.3);
+border-radius: 1%;
+img {
+    max-width: 12em;
+    max-height: 12em;
+}
+
+}
+
+.description {
+    margin: 1em;;
+}
